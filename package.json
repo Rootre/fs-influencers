@@ -1,0 +1,39 @@
+{
+  "name": "fs-influencers",
+  "version": "1.0.0",
+  "description": "Landing page for Footshop influencers",
+  "main": "pages/index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rootre/fs-influencers.git"
+  },
+  "keywords": [
+    "liform",
+    "formik",
+    "react",
+    "transformator"
+  ],
+  "author": "Ondřej Tůma <ondr@centrum.cz>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rootre/fs-influencers/issues"
+  },
+  "homepage": "https://github.com/Rootre/fs-influencers#readme",
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.12.0",
+    "react-svg-loader": "^3.0.2"
+  }
+}

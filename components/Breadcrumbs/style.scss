@@ -1,0 +1,37 @@
+@import "~Sass/_helpers.scss";
+
+.wrapper {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0 0 15px;
+    padding: 0;
+
+    a,
+    span {
+        color: color(white);
+        display: block;
+        text-decoration: none;
+    }
+    li {
+        display: inline-block;
+        margin-right: 24px;
+        position: relative;
+
+        & + li {
+            &:before {
+                @include square(4px);
+                border-right: 1px solid color(white);
+                border-top: 1px solid color(white);
+                content: '';
+                display: block;
+                left: -16px;
+                margin-top: -4px;
+                position: absolute;
+                top: 50%;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

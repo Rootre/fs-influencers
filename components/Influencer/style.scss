@@ -1,0 +1,60 @@
+@import "~Sass/_helpers.scss";
+
+.container {
+    background: 50% 50% / cover color(tundora);
+    padding-top: 100%;
+    position: relative;
+
+    @include media(tablet) {
+        margin: 8px;
+        padding-top: 133%;
+    }
+}
+.info {
+    bottom: 40px;
+    left: 55px;
+    position: absolute;
+    right: 55px;
+    text-align: center;
+
+    a {
+        border: 2px solid color(white);
+        color: color(white);
+        display: block;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 22px;
+        padding: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    h2 {
+        color: color(white);
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        line-height: 27px;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+    }
+
+    @include media(tablet) {
+        left: 15px;
+        right: 15px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+}
+.wrapper {
+    display: block;
+    margin: 0 0 10px;
+    width: 100%;
+
+    @include media(tablet) {
+        margin: 0;
+        width: 33.33%;
+    }
+}

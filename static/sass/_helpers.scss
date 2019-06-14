@@ -1,0 +1,169 @@
+/* colors */
+$black: #000;
+$california: #f5a008;
+$concrete: #f2f2f2;
+$red-orange: #fa3232;
+$silver: #c8c8c8;
+$silver-chalice: #aaa;
+$tundora: #4d4d4d;
+$white: #fff;
+
+/* breakpoints */
+$container--desktop-lg: 	1700px;
+$container--desktop: 		1366px;
+$container--tablet: 		990px;
+$container--phablet: 		768px;
+$container--mobile: 		560px;
+
+/* media queries */
+$desktop-beyond: "only screen and (min-width: #{$container--desktop-lg + 1})";
+$desktop-lg: "only screen and (min-width: #{$container--desktop + 1})";
+$desktop: "only screen and (min-width: #{$container--tablet + 1})";
+$tablet: "only screen and (min-width: #{$container--phablet + 1})";
+$phablet: "only screen and (min-width: #{$container--mobile + 1})";
+$mobile: "only screen";
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+
+/* mixins */
+@mixin media($type) {
+    $media: $mobile;
+    @if $type == desktop-beyond {
+        $media: $desktop-beyond;
+    } @else if $type == desktop-lg {
+        $media: $desktop-lg;
+    } @else if $type == desktop {
+        $media: $desktop;
+    } @else if $type == tablet {
+        $media: $tablet;
+    } @else if $type == phablet {
+        $media: $phablet;
+    } @else if $type == retina {
+        $media: $retina;
+    }
+
+    @media #{$media} {
+        @content;
+    }
+}
+
+@mixin dim($width: auto, $height: auto) {
+    height: $height;
+    width: $width;
+}
+
+@mixin square($size) {
+    @include dim($size, $size);
+}
+
+
+
+
+// names used from: http://chir.ag/projects/name-that-color/
+//
+// every color will be rendered as a class with color-- prefix for text coloring and bg-- prefix for backgrounds for quick use
+// color can be called via function color(name)
+
+$colors-map: (
+    alabaster: #f8f8f8,
+    alto: #d0d0d0,
+    aqua-spring: #eef7fa,
+    black: #000,
+    boulder: #767676,
+    bridesmaid: #fef4ec,
+    bright-sun: #fbc240,
+    buttercup: #f5a00a,
+    california: #f5a007,
+    cerulean: #01a5df,
+    cerise-red: #e22764,
+    chambray: #3b5998,
+    chilean-fire: #f57308,
+    christi: #24b30c,
+    cod-gray: #1a1a1a,
+    concrete: #f3f3f3,
+    danger: #d9534f,
+    deep-cerulean: #0078b0,
+    dove-gray: #666,
+    dusty-gray: #999,
+    emperor: #555,
+    facebook: #3b5998,
+    gallery: #ededed,
+    gray: #808080,
+    hot-toddy: #b47808,
+    info: #5bc0de,
+    instagram: #8a3ab9,
+    laser: #c5ad6c,
+    lipstick: #c90060,
+    mantis: #82c156,
+    mercury: #e8e8e8,
+    mine-shaft: #333,
+    nobel: #b2b2b2,
+    red: #f00,
+    red-orange: #fa3232,
+    red-violet: #e21a90,
+    romantic: #ffc9b1,
+    sazerac: #fff2e0,
+    scarlet: #ff220d,
+    silver: #ccc,
+    silver-chalice: #aaa,
+    snapchat: #fffc00,
+    success: #5cb85c,
+    tahiti-gold: #d78c08,
+    tea-green: #c9e9b2,
+    trinidad: #e14b0a,
+    tundora: #4d4d4d,
+    twitter: #4099ff,
+    valencia: #d43636,
+    warning: #f0ad4e,
+    wild-sand: #f4f4f4,
+    white: #fff,
+    youtube: #ff0000,
+);
+
+@function color($name) {
+    @if (map-has-key($colors-map, $name)) {
+        @return map-get($colors-map, $name);
+    }
+}
+
+$base-color: color(tundora);
+$bg-color: color(white);
+
+
+
+$container--desktop-lg: 	1700px;
+$container--desktop: 		1366px;
+$container--tablet: 		990px;
+$container--phablet: 		768px;
+$container--mobile: 		560px;
+
+$desktop-beyond: "only screen and (min-width: #{$container--desktop-lg + 1})";
+$desktop-lg: "only screen and (min-width: #{$container--desktop + 1})";
+$desktop: "only screen and (min-width: #{$container--tablet + 1})";
+$tablet: "only screen and (min-width: #{$container--phablet + 1})";
+$phablet: "only screen and (min-width: #{$container--mobile + 1})";
+$mobile: "only screen";
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+
+
+@mixin media($type) {
+    $media: $mobile;
+    @if $type == desktop-beyond {
+        $media: $desktop-beyond;
+    } @else if $type == desktop-lg {
+        $media: $desktop-lg;
+    } @else if $type == desktop {
+        $media: $desktop;
+    } @else if $type == tablet {
+        $media: $tablet;
+    } @else if $type == phablet {
+        $media: $phablet;
+    } @else if $type == retina {
+        $media: $retina;
+    }
+
+    @media #{$media} {
+        @content;
+    }
+}
