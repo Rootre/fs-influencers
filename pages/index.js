@@ -2,6 +2,8 @@ import Head from 'next/head';
 
 import Influencers from 'Components/Influencers';
 
+import 'Sass/influencers.scss';
+
 function Index() {
     return (
         <div>

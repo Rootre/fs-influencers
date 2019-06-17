@@ -1,10 +1,8 @@
 import React from 'react';
 
-import styles from './style.scss';
-
 function Breadcrumbs() {
     return (
-        <ul className={styles.wrapper}>
+        <ul className={'breadcrumbs'}>
             <li><a href="/">Hlavní stránka</a></li>
             <li><span>Influencers</span></li>
         </ul>

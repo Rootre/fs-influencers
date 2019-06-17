@@ -3,8 +3,6 @@ import React from 'react';
 import Header from 'Components/Header';
 import Influencer from 'Components/Influencer';
 
-import styles from './style.scss';
-
 const data = [
     {
         image: '/static/images/influencers/yzomandias.jpg',
@@ -40,9 +38,9 @@ const data = [
 
 function Influencers() {
     return (
-        <div className={styles.wrapper}>
+        <div className={'influencers'}>
             <Header/>
-            <div className={styles.influencers}>
+            <div className={'influencers'}>
                 {data.map(influencer => (
                     <Influencer {...influencer}/>
                 ))}
